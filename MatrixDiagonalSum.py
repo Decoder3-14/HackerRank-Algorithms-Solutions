@@ -13,6 +13,17 @@ import sys
 # The function accepts 2D_INTEGER_ARRAY arr as parameter.
 #
 
+def diagonalDifferenceEnhanced(arr):
+    n = len(arr)
+    
+    leftToRight = 0
+    rightToLeft = 0
+    for i in range(0, n):
+        leftToRight += arr[i][i]
+        rightToLeft += arr[i][n - i - 1]
+    return abs(leftToRight - rightToLeft)
+
+
 def diagonalDifference(arr):
     n = len(arr)
     
